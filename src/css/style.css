@@ -1,0 +1,155 @@
+@import url(./reset.css);
+@import url(./global.css);
+
+.logo-alura {
+    margin-left: 20px;
+    padding-top: 20px;
+    width: 2%;
+}
+
+main {
+    display: flex;
+    margin: 0 0 50px 80px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.text-area {
+    border: none;
+    color: var(--primary-color);
+    margin-top: 90px;
+    text-transform: lowercase;
+    font-size: 2rem;
+}
+
+::placeholder {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.information {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.information img {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.information h6 {
+    color: #495057;
+    font-size: 0.8rem;
+}
+
+.buttons {
+    display: flex;
+    margin-top: 18px;
+}
+
+.btn-encrypt {
+    color: #FFFFFF;
+    background: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 24px;
+    height: 67px;
+    width: 328px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+}
+
+.btn-encrypt:hover {
+    background: var(--tertiary-color);
+}
+
+.btn-decrypt {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 24px;
+    height: 67px;
+    width: 328px;
+    margin-left: 30px;
+    cursor: pointer;
+    transition: all 0.8s ease-in-out;
+}
+
+.btn-decrypt:hover {
+    background: var(--tertiary-color);
+}
+
+.btn-decrypt::selection {
+    background: var(--primary-color);
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.message {
+    background: var(--text-area-color);
+    background-image: url(../assets/images/puppet.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 70%;
+    border: none;
+    border-radius: 24px;
+    color: var(--secondary-color);
+    margin: 20px 0 0 98px;
+    font-size: 2rem;
+}
+
+.message:focus {
+    outline: none;
+}
+
+.message::selection {
+    background: var(--primary-color);
+}
+
+.btn-copy {
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 24px;
+    height: 67px;
+    width: 328px;
+    cursor: pointer;
+    margin: 20px 0 0 98px;
+    transition: all 0.8s ease-in-out;
+}
+
+.btn-copy:hover {
+    background: var(--tertiary-color);
+}
+
+.btn-copy::selection {
+    background: var(--primary-color);
+}
+
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+footer p, a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+footer p::after {
+    content: '🤘';
+}
