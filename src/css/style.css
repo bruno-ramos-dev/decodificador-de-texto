@@ -4,13 +4,18 @@
 .logo-alura {
     margin-left: 20px;
     padding-top: 20px;
-    width: 2%;
 }
 
 main {
     display: flex;
-    margin: 0 0 50px 80px;
     align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -20,6 +25,7 @@ main {
     margin-top: 90px;
     text-transform: lowercase;
     font-size: 2rem;
+    resize: none;
 }
 
 ::placeholder {
@@ -106,6 +112,8 @@ aside {
     color: var(--secondary-color);
     margin: 20px 0 0 98px;
     font-size: 2rem;
+    width: auto;
+    resize: none;
 }
 
 .message:focus {
@@ -136,11 +144,16 @@ aside {
     background: var(--primary-color);
 }
 
+.btn-encrypt, .btn-decrypt, .btn-copy {
+    font-size: 1rem;
+}
+
 footer {
     text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    margin-top: 200px;
   }
 
 footer p, a {
@@ -152,4 +165,66 @@ footer p, a {
 
 footer p::after {
     content: '🤘';
+}
+
+@media (max-width: 1024px) {
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+    }
+
+    .text-area, .information {
+        margin-left: 50px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .btn-decrypt {
+        margin: 10px 0 5px 0;
+    }
+
+    aside {
+        flex-direction: column-reverse;
+        margin-right: 100px;
+    }
+
+
+    .btn-encrypt, .btn-decrypt, .btn-copy {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 342px) {
+
+    .btn-encrypt, .btn-decrypt, .btn-copy {
+        height: 50px;
+        width: 235px;
+        font-size: 1.5rem;
+    }
+
+    .message {
+        width: 80%;
+    }
+}
+
+@media (max-width: 280px) {
+
+    .text-area, .information {
+        margin-left: 20px;
+    }
+
+    .information h6 {
+        font-size: 0.7rem;
+    }
 }
