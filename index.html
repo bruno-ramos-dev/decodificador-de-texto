@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./src/assets/images/icon/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/script.js" defer></script>
     <title>Encriptador</title>
 </head>
 <body>
@@ -21,14 +23,14 @@
                 <h6>Apenas letras minúsculas e sem acento.</h6>
             </div>
             <div class="buttons">
-                <button class="btn-encrypt">Criptografar</button>
-                <button class="btn-decrypt">Descriptografar</button>
+                <button type="button" class="btn-encrypt" id="btn-encrypt">Criptografar</button>
+                <button type="button" class="btn-decrypt" id="btn-decrypt">Descriptografar</button>
             </div>
         </section>
 
         <aside>
             <textarea class="message" cols="20" rows="10"></textarea>
-            <button class="btn-copy">Copiar</button>
+            <button type="button" class="btn-copy">Copiar</button>
         </aside>
     </main>
 
