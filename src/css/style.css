@@ -116,6 +116,12 @@ aside {
     resize: none;
 }
 
+.message::placeholder {
+    font-size: 1.5rem;
+    text-align: center;
+    transform: translateY(420px);
+}
+
 .message:focus {
     outline: none;
 }
@@ -165,6 +171,14 @@ footer p, a {
 
 footer p::after {
     content: '🤘';
+}
+
+::-webkit-scrollbar {
+    background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-area-color);
 }
 
 @media (max-width: 1024px) {
