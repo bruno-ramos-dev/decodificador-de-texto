@@ -1,12 +1,21 @@
 const textArea = document.querySelector('.text-area')
-const message = document.querySelector('.message')
 const encryptBtn = document.getElementById('btn-encrypt')
 const decryptBtn = document.getElementById('btn-decrypt')
+const copyBtn = document.getElementById('btn-copy')
+const message = document.getElementById('message')
+
+const modifieTextArea = () => {
+    message.style.backgroundImage = 'none'
+}
+
 
 encryptBtn.addEventListener('click', () => {
+
+    modifieTextArea()
     const encryptText = encrypt(textArea.value)
     message.value = encryptText
     textArea.value = ''
+
 })
 
 const encrypt = (encryptString) => {
@@ -25,6 +34,7 @@ const encrypt = (encryptString) => {
 }
 
 decryptBtn.addEventListener('click', () => {
+    modifieTextArea()
     const decryptText = decrypt(textArea.value)
     message.value = decryptText
     textArea.value = ''
@@ -45,10 +55,19 @@ const decrypt = (decryptString) => {
 
 }
 
+const copyToClipboard = async () => {
+    modifieTextArea()
+    await navigator.clipboard.writeText(message.value)
+}
 
-// As "chaves" de criptografia que utilizaremos são:
-// A letra "e" é convertida para "enter"
-// A letra "i" é convertida para "imes"
-// A letra "a" é convertida para "ai"
-// A letra "o" é convertida para "ober"
-// A letra "u" é convertida para "ufat"
+copyBtn.addEventListener('click', async () => {
+    copyBtn.textContent = 'Copiado'
+    copyBtn.style.color = '#FFFFFF'
+    copyBtn.style.background = '#994a98'
+    setTimeout(() => {
+        copyBtn.textContent = 'Copiar'
+        copyBtn.style.color = '#49064c'
+        copyBtn.style.background = '#808080'
+    }, 2000)
+    await copyToClipboard()
+})
